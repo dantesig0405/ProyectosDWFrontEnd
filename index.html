@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form action="">
+      <h1>Registro</h1>
+      <label for="Nombre">Nombre : </label>
+      <input type="text" id="Nombre" />
+      <label for="Apellido">Apellido : </label>
+      <input type="text" id="Apellido" />
+      <label for="">Usuario : </label>
+      <input type="text" id="Usuario" />
+      <label for="Correo">Correo : </label>
+      <input type="text" id="Correo" />
+      <label for="Contraseña">Contraseña : </label>
+      <input type="text" id="Contraseña" />
+
+      <button id="btn" onclick="mostrarForm()">Iniciar Sesión</button>
+     <button class="modo" onclick="modoOscuro()"></button>
+     
+    </form>
+    <script>
+      function mostrarForm() {
+        let Nombre = document.getElementById("Nombre").value;
+        let Apellido = document.getElementById("Apellido").value;
+        let Usuario = document.getElementById("Usuario").value;
+        let Correo = document.getElementById("Correo").value;
+        let Contraseña = document.getElementById("Contraseña").value;
+
+        alert(`Información Ingresado:\n
+                Nombre: ${Nombre}\n
+                Apellido: ${Apellido}\n
+                Usuario: ${Usuario}\n
+                Correo: ${Correo}\n
+                Contraseña: ${Contraseña}\n`);
+      }
+      function modoOscuro(){
+        document.body.classList.toggle('dark')
+
+      }
+      </script>
+   </body>
+</html>
